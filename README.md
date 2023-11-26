@@ -1,9 +1,5 @@
 # AIM: Study DevOps and implement CI/CD pipeline:
 
-## Demo:
-
-[ankitverma-cicd-demo](https://ankitverma-cicd.netlify.app/)
-
 # Netlify Setup:
 
 - Signup/Login on https://www.netlify.com/
@@ -16,17 +12,19 @@
 
 - Signup/Login on https://github.com/
 - Go to (https://github.com/new) Repositories => Create a new repository => Visibility Public => Add .gitignore (Node)
-- Go to settings => ci/cd => variables these two variables:
-  - key: NETLIFY_AUTH_TOKEN, value: (copied earlier)
-  - key: NETLIFY_SITE_ID, value: (copied earlier)
-- Go to Repository/Project => Branches => New Branch => Create a new branch from main with any name(eg: feat-calculator)
-- Clone the project on your local machine using git clone command
+- Go to repository settings => Secrets and variables => Actions
+- Add Environment secrets (ENV - Production)
+  - NETLIFY_AUTH_TOKEN
+  - NETLIFY_SITE_ID
+- Repository secrets
+  - NETLIFY_AUTH_TOKEN
+  - NETLIFY_SITE_ID
 
 # Local Machine Setup And Changes:
 
-- Download this folder and copy all inner files/folder into your cloned folder https://drive.google.com/drive/folders/1hc6hpT6oJSGLWO_gawokDYrvxC26IxCj?usp=sharing
+- Download this folder and copy all inner files/folder into your cloned folder https://github.com/ankitverma31/cicd-pipeline-demo
 - Open the cloned project in code editor
-- **IMPORTANT:** Checkout the branch which you have created earlier and NOT THE MAIN BRANCH. You will do all changes in your branch and we will merge this branch in main on successful pipeline build
+- **IMPORTANT:** Checkout the branch which you have created earlier and NOT THE MASTER BRANCH. You will do all changes in your branch and we will merge this branch in master on successful pipeline build
 - Run command in terminal(in case of error, install nodejs https://nodejs.org/en/download/): **npm i**
 - Go to src/calculator => only add.js is implemented. You will need to implement for subtract.js, multiply.js, divide.js
 - Go to src/index.test.js => only Addition is implemented. You will need to implement Subtraction, Multiplication, Division
@@ -34,7 +32,7 @@
 - Run this command to run test cases: **npm run test**
 - You can open and view build/index.html file in broweser to check you changes
 - In case of successful build and test, commit changes in your branch and push the changes to remote repository and wait for piplines/jobs to pass
-- Go to gitlab => new merge request => **Source branch:** (Your branch name) => **Target branch:** main
+- Go to gitlab => new merge request => **Source branch:** (Your branch name) => **Target branch:** master
 - **Title:** changes you made, Merge options: uncheck delete => Create merge request => merge
 - Go to pipelines => once build, test is completed => click on deploy play icon
 - Site will be deployed automatically to netlify and all functionalities should work(add, subtract, multiply, delete)
@@ -43,6 +41,6 @@
 
 - [Basic Git Commands](https://www.freecodecamp.org/news/10-important-git-commands-that-every-developer-should-know/)
 - [CI/CD](https://about.gitlab.com/topics/ci-cd/)
+- [Github Workflows] (https://docs.github.com/en/actions/using-workflows)
 - [About DevOps](https://aws.amazon.com/devops/what-is-devops/)
-- [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
 - [About DevOps](https://aws.amazon.com/devops/what-is-devops/)
