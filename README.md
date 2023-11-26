@@ -9,7 +9,7 @@
 - Signup/Login on https://www.netlify.com/
 - Download build folder from here: https://drive.google.com/drive/folders/140T-1efrCwUqQ805lKRihMFC_XzPi3OY
 - Drag and drop build folder here you will get live url of your site: https://app.netlify.com/drop
-- Go to https://app.netlify.com/user/applications#personal-access-tokens and generate a new access token. You can use "Github CI CD" as the description of your token. Copy and save this token we need this later
+- Go to https://app.netlify.com/user/applications#personal-access-tokens and generate a new access token. You can use "Github CI CD" as the description of your token. Copy and save this token we need this later => Expiry (No Expiration)
 - Go to Site Overview => Site Settings => General => Copy site ID (We will need it later)
 
 # Github Setup:
